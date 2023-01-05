@@ -1,4 +1,14 @@
-# Books
+# CatFactsUI
+
+Made using Angular
+
+## Description
+
+Consult the daily facts about cats.
+
+### Installing
+
+Copy the project and launch it on your machine by following the instructions down below.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
