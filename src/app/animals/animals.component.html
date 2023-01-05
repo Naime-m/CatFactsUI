@@ -1,3 +1,15 @@
 <div *ngFor="let fact of animal">
-    <p>{{fact.text}}</p>
+    <mat-card class="fact-card">
+        <mat-card-header>
+            <mat-card-title>Fact of the day</mat-card-title>
+            <mat-card-subtitle>{{fact.type}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>This card indeterminates progress bar.</p>
+        </mat-card-content>
+        <mat-card-footer>
+            <span>Created: {{fact.createdAt | date:'shortDate'}} | </span>
+            <span>Updated last: {{fact.updatedAt | date:'shortDate'}}</span>
+        </mat-card-footer>
+    </mat-card>
 </div>
