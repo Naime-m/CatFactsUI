@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Animal } from '../models/animal';
 import { AnimalService } from '../services/animal.service';
 
 @Component({
@@ -8,16 +9,19 @@ import { AnimalService } from '../services/animal.service';
 })
 export class AnimalsComponent implements OnInit {
 
+  animal: Animal[] = [] ;
+  
+
   constructor(private animalService: AnimalService) {}
 
   ngOnInit(): void {
-  this.getAllFishes();
+  this.getAllAnimals();
   }
-  
-  getAllFishes() {
-    this.animalService.onGetAllFishes().subscribe(
+
+  getAllAnimals() {
+    this.animalService.onGetAllAnimals().subscribe(
       response => {
-        console.log(response);
+        this.animal = response;
       }
     )
   }
